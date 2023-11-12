@@ -4,7 +4,7 @@ control.runInParallel(function() {
 
     {
         // string tests
-        const ws = new WebSocket("wss://echo.websocket.org")
+        const ws = new WebSocket("wss://ws.postman-echo.com/raw")
         ws.onerror = () => console.log("error")
         ws.onmessage = (msg) => {
             const data = msg.data;
