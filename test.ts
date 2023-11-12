@@ -1,6 +1,6 @@
 game.consoleOverlay.setVisible(true)
 control.runInParallel(function() {
-    console.log(`connecting to https://www.websocket.org/echo.html`)
+    console.log(`connecting to websocket wss://ws.postman-echo.com/raw`)
 
     {
         // string tests
@@ -24,7 +24,7 @@ control.runInParallel(function() {
     
     {
         // binary tests
-        const ws = new WebSocket("wss://echo.websocket.org")
+        const ws = new WebSocket("wss://ws.postman-echo.com/raw")
         ws.onerror = () => console.log("error")
         ws.onmessage = (msg) => {
             const data = msg.data;
